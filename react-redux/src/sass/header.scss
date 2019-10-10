@@ -1,0 +1,27 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 3%;
+    align-items: center;
+
+    background-color: #F5F5F5;
+
+
+    .logo {
+        display: flex;
+        letter-spacing: -1px;
+
+        #find-text {
+            font-weight: 100
+        }
+    }
+
+    .links {
+        display: flex;
+        list-style-type: none;
+
+        li {
+            padding: 0px 30px;
+        }
+    }
+}
