@@ -3,14 +3,17 @@ import { connect } from 'react-redux';
 
 import { fetchBreweries } from '../actions'
 
+import Brewery from './Brewery'
+
 const Breweries = props => {
-    console.log(props)
     useEffect(() => {
         props.fetchBreweries()
     }, [])
     return (
-        <div>
-            <p>hi from Breweries</p>
+        <div className='breweries'>
+           {props.breweries.map(brewery => (
+               <Brewery id={brewery.id} brewery={brewery}/>
+            ))}
         </div>
     )
 }
