@@ -1,7 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 
+import { fetchBreweries } from '../actions'
+
 const Breweries = props => {
+    console.log(props)
+    useEffect(() => {
+        props.fetchBreweries()
+    }, [])
     return (
         <div>
             <p>hi from Breweries</p>
@@ -17,4 +23,4 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps, {})(Breweries);
+export default connect(mapStateToProps, { fetchBreweries })(Breweries);
